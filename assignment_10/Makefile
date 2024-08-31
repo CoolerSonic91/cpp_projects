@@ -1,6 +1,10 @@
 compile:
+	@echo "Compiling program..."
 	@g++ main.cpp -o programa
-run:
+
+run: compile
+	@echo "Running program..."
 	@./programa
-test:
-	@pwd
+
+
+
