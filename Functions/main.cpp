@@ -1,17 +1,19 @@
 #include <iostream>
 #include "compare.h" //Preprocessor
+#include "multiplication.h"
 using namespace std;
 
-int main(){
+int main()
+{
+    int maximum = max(900, 200);
+    cout << "min : " << maximum << endl;
 
-    int x {5};
-    int y{12};
+    int minimun = min(40, 39);
+    cout << "min : " << minimun << endl;
 
-   int result = min(x,y);
-   cout << "min : " << result << endl;
-
-   result = max(x,y);
-   cout << "min : " << result << endl;
+    // Multiply
+    int multiply = incr_mult(40, 50);
+    cout << "multiplication : " << multiply << endl;
 
     return 0;
 }
