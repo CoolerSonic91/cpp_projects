@@ -1,9 +1,14 @@
 compile:
 	@echo "Compiling file..."
 	@g++ *.cpp -o programa
-	 
-run: compile
+
+start:
 	@echo "Running file..."
 	@./programa
-test:
-	@pwd
+	 
+run: compile start
+	
+delete:
+	@echo "deleting file...s"
+	@rm programa
+
