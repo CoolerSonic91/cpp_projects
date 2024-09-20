@@ -1,6 +1,8 @@
 #include <iostream>
 #include <optional>
 #include <cstring>
+#include "utilities.h"
+
 using namespace std;
 
 /*
@@ -40,17 +42,12 @@ int main()
 }
 */
 
- 
-int main(){
- 
-    unsigned int age{13};
- 
-    auto say_my_age = [&age](){
-        std::cout << "You are " << age << " years old!" << std::endl;
-        ++age;
-    };
-    say_my_age();
-    std::cout << "age " << age << std::endl;
- 
+int main()
+{
+    std::string student_to_find{"Kumar"};
+    const char *students[]{"Mary", "Steve", "Kumar", "Ahmed"};
+    int index{hunt_down(student_to_find.c_str(), students, 4)};
+    std::cout << "index : " << index << std::endl;
+
     return 0;
 }
